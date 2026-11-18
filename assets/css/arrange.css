@@ -1,0 +1,74 @@
+/* Arrange editor UI (only loaded on index.html?arrange) */
+body.arranging { padding-top: 96px; }
+#arrBar { position: fixed; top: 0; left: 0; right: 0; z-index: 10000; background: rgba(14,10,16,.96); backdrop-filter: blur(8px); border-bottom: 1px solid #ff3fb0; box-shadow: 0 6px 24px rgba(0,0,0,.6); font: 13px/1.2 'Josefin Sans', system-ui, sans-serif; color: #f7e6f1; }
+#arrBar .arr-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; }
+#arrBar .arr-sub { border-top: 1px solid #2c1d28; padding-top: 6px; overflow-x: auto; flex-wrap: nowrap; }
+#arrBar .arr-title { font-family: 'Yesteryear', cursive; font-size: 22px; font-weight: 400; color: #ff7fcf; text-shadow: 0 0 8px #ff3fb0; margin-right: 6px; }
+#arrBar button { font: inherit; color: inherit; background: #241820; border: 1px solid #4a3042; border-radius: 6px; padding: 6px 10px; cursor: pointer; white-space: nowrap; }
+#arrBar button:hover:not(:disabled) { border-color: #ff3fb0; }
+#arrBar button:disabled, #arrBar .arr-dis { opacity: .35; cursor: default; pointer-events: none; }
+#arrBar .arr-primary, #arrModal .arr-primary { background: #ff3fb0; border-color: #ff3fb0; color: #14000b; font-weight: 600; }
+#arrBar .arr-seg { display: inline-flex; border: 1px solid #4a3042; border-radius: 7px; overflow: hidden; }
+#arrBar .arr-seg button { border: 0; border-radius: 0; background: transparent; }
+#arrBar .arr-seg button.on { background: #ff3fb0; color: #14000b; font-weight: 600; }
+#arrBar .arr-sep { width: 1px; height: 22px; background: #3a2834; margin: 0 4px; }
+#arrBar .arr-grow { flex: 1; }
+#arrBar .arr-lab { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+#arrBar input[type=range] { width: 80px; accent-color: #ff3fb0; }
+#arrBar input[type=checkbox] { accent-color: #ff3fb0; }
+#arrBar .arr-lbl { color: #b998ad; margin: 0 4px 0 8px; }
+#arrSwap img { height: 40px; width: 40px; object-fit: cover; border-radius: 4px; border: 2px solid transparent; cursor: pointer; flex: none; }
+#arrSwap img.arr-fr { object-fit: contain; background: #2a1d26; }
+#arrSwap img.on { border-color: #ff3fb0; }
+
+/* walls in edit mode */
+body.arranging [data-wall] .w-item { cursor: grab; }
+body.arr-dragging, body.arr-dragging * { cursor: grabbing !important; user-select: none; }
+body.arranging [data-wall].arr-active { outline: 2px dashed rgba(255,63,176,.55); outline-offset: -2px; }
+.arr-sel { outline: 1px solid #ff3fb0; }
+.arr-box { position: absolute; inset: -2px; pointer-events: none; }
+.arr-box i { position: absolute; width: 14px; height: 14px; background: #fff; border: 2px solid #ff3fb0; border-radius: 3px; pointer-events: auto; }
+.arr-box [data-h=nw] { left: -8px; top: -8px; cursor: nwse-resize; }
+.arr-box [data-h=se] { right: -8px; bottom: -8px; cursor: nwse-resize; }
+.arr-box [data-h=ne] { right: -8px; top: -8px; cursor: nesw-resize; }
+.arr-box [data-h=sw] { left: -8px; bottom: -8px; cursor: nesw-resize; }
+.arr-box .arr-rot { left: 50%; top: -34px; margin-left: -8px; border-radius: 50%; cursor: grab; }
+.arr-box .arr-rot::after { content: ''; position: absolute; left: 4px; top: 12px; width: 2px; height: 20px; background: #ff3fb0; }
+.arr-guide { position: absolute; display: none; z-index: 9999; pointer-events: none; background: #38e1ff; box-shadow: 0 0 6px #38e1ff; }
+.arr-guide.v { top: 0; bottom: 0; width: 1px; }
+.arr-guide.h { left: 0; right: 0; height: 1px; }
+
+/* sticker mode: let clicks reach the stickers, ghost the text so you can see what you're covering */
+body.arr-stickers .dealsfaq > :not(:first-child),
+body.arr-stickers .dealsfaq > :not(:first-child) * { pointer-events: none !important; }
+body.arr-ghost .dealsfaq > :not(:first-child) { opacity: .28; transition: opacity .2s; }
+body.arr-ghost .dealsfaq section > div, body.arr-ghost #faq { outline: 2px dashed rgba(255,255,255,.7); outline-offset: 4px; }
+
+/* drawer */
+#arrDrawer { position: fixed; top: 96px; right: 0; bottom: 0; width: 340px; z-index: 10001; background: #140e12; border-left: 1px solid #ff3fb0; padding: 14px; overflow-y: auto; transform: translateX(105%); transition: transform .2s; font: 14px/1.4 'Josefin Sans', system-ui, sans-serif; color: #f7e6f1; box-shadow: -10px 0 30px rgba(0,0,0,.6); }
+#arrDrawer.open { transform: none; }
+#arrDrawer .arr-dhead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+#arrDrawer button { background: #241820; color: inherit; border: 1px solid #4a3042; border-radius: 6px; padding: 4px 9px; cursor: pointer; }
+.arr-hint { margin: 12px 0 6px; color: #ff9fd6; }
+.arr-note { font-size: 12px; color: #b998ad; }
+.arr-note code { color: #ffe14d; }
+.arr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.arr-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; border: 2px solid #2c1d28; cursor: pointer; background: #221820; }
+.arr-grid.fr img, .arr-grid.st img { object-fit: contain; padding: 4px; box-sizing: border-box; }
+.arr-grid img:hover { border-color: #ff7fcf; }
+.arr-grid img.on { border-color: #ff3fb0; box-shadow: 0 0 10px #ff3fb0; }
+
+/* modal + toast */
+#arrModal { position: fixed; inset: 0; z-index: 10002; background: rgba(0,0,0,.6); display: none; align-items: center; justify-content: center; font: 14px/1.5 'Josefin Sans', system-ui, sans-serif; color: #f7e6f1; }
+#arrModal.open { display: flex; }
+#arrModal .arr-card { background: #170f15; border: 1px solid #ff3fb0; border-radius: 12px; padding: 20px 22px; width: min(460px, 92vw); box-shadow: 0 0 30px rgba(255,63,176,.35); }
+#arrModal h3 { margin: 0 0 6px; font-size: 18px; }
+#arrModal label { display: block; margin: 10px 0 0; font-size: 13px; color: #d9c3d1; }
+#arrModal label.arr-inline { display: flex; gap: 6px; align-items: center; }
+#arrModal input:not([type=checkbox]) { display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 8px; background: #0c080b; color: #fff; border: 1px solid #4a3042; border-radius: 6px; font: inherit; }
+#arrModal details { margin-top: 10px; font-size: 13px; color: #d9c3d1; }
+#arrModal ol { padding-left: 18px; margin: 6px 0; }
+#arrModal .arr-btns { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+#arrModal button { font: inherit; color: inherit; background: #241820; border: 1px solid #4a3042; border-radius: 6px; padding: 7px 12px; cursor: pointer; }
+#arrToast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; z-index: 10003; background: #ff3fb0; color: #14000b; padding: 9px 16px; border-radius: 8px; font: 600 14px 'Josefin Sans', system-ui, sans-serif; transition: all .2s; pointer-events: none; }
+#arrToast.show { opacity: 1; transform: translate(-50%, 0); }
