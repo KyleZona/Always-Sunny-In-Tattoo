@@ -23,7 +23,10 @@ Open the site with `?arrange` on the end of the address, e.g. `https://kylezona.
 
 ## Files
 
-- `index.html`: home page
+- `index.html`, `about.html`, `work.html`, `faq.html`, `book.html`: the pages (book.html holds the calendar, request-a-date and flash-day screens)
+- `images/flash/fl-1.png` … `fl-24.png`: flash designs for deal days (add these)
+- `assets/js/dc.js`: runs the page templates (calendar, forms)
+- `index.html` home page
 - `data/layout.js`: where every frame and sticker sits (written by the editor)
 - `data/catalog.js`: the frames, photos and stickers you can use
 - `assets/js/walls.js`: draws both walls

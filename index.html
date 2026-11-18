@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alukx Alexi Tattoo</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&amp;display=swap" rel="stylesheet">
 <style>
@@ -25,42 +24,26 @@ a{color:#ff9ad6}a:hover{color:#ffd0ec}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #ffd0ec;outline-offset:3px}
 summary{cursor:pointer;list-style:none}
 summary::-webkit-details-marker{display:none}
-.bubble{position:relative;flex:1 1 300px;max-width:400px;box-sizing:border-box;background-color:#fff7fc;background-image:radial-gradient(#ffd3ea 1.6px,transparent 1.7px);background-size:11px 11px;border:3px solid var(--neon);border-radius:28px;transition:transform .3s}
-.bubble::after{content:"";position:absolute;bottom:-16px;left:52px;width:26px;height:26px;background:#fff7fc;border-right:3px solid var(--neon);border-bottom:3px solid var(--neon);transform:rotate(45deg)}
-.bubble.tail-c::after{left:calc(50% - 13px)}
-.bubble.tail-r::after{left:auto;right:52px}
-.bubble+.bubble{margin-left:-40px}
-.stickerwall{position:absolute;inset:0;background-color:#22121c;background-image:radial-gradient(circle at 20px 20px,#ff3fb0 0 16px,transparent 17px),radial-gradient(circle at 60px 50px,#ffe14d 0 22px,transparent 23px),radial-gradient(circle at 30px 70px,#38e1ff 0 12px,transparent 13px),radial-gradient(circle at 80px 20px,#b26bff 0 18px,transparent 19px),radial-gradient(circle at 50px 30px,#ff8a1f 0 14px,transparent 15px),radial-gradient(circle at 15px 45px,#ffffff 0 10px,transparent 11px);background-size:97px 89px,131px 113px,73px 101px,151px 127px,109px 83px,67px 79px}
-.stickerwall::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.68)}
 .crowd{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent)}
-@media (max-width:760px){.bubble+.bubble{margin-left:0}.bubble{transform:none !important}}
 .greenwall{background-color:#123628;background-image:url(images/green-tile.jpg);background-size:640px 640px;background-repeat:repeat;background-position:center top}
 .chev{transition:transform .2s}
 details[open] .chev{transform:rotate(180deg)}
 details[open] summary{color:#ffd0ec}
 </style>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&amp;family=Yesteryear&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yesteryear&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#000000}
-.goldleaf{background-image:linear-gradient(175deg,#fff3c4 0%,#e9c46a 22%,#b8862b 46%,#f5dc8c 58%,#a8741f 78%,#e8c66d 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(70,42,8,0.55);filter:drop-shadow(2px 3px 0 #2a1806) drop-shadow(0 8px 14px rgba(0,0,0,0.45))}
+.rwSign .tubes{animation:rwFlick 2.6s linear both}
+@keyframes rwFlick{0%,10%{opacity:.12}11%{opacity:1}13%,24%{opacity:.12}25%{opacity:1}27%{opacity:.3}44%{opacity:.3}46%,100%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.rwSign .tubes{animation:none}}
 .wallbg{background-color:#123a6b;background-image:url(images/wall-blue.jpg);background-size:cover;background-position:center}
 </style>
-
-
-<style>
-body{margin:0}
-</style>
-
-<style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
-
+<div id="app"></div>
+<template id="dc-Site_w_Plastic">
 <div style="background-color: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-weight: 300; min-height: 100vh">
 
-<aside aria-label="Upcoming event" style="background: #ff3fb0; color: #120009; box-shadow: 0 0 28px rgba(255,63,176,0.45)">
+<aside aria-label="Upcoming event" style="background: {{neon}}; color: #120009; box-shadow: 0 0 28px {{neonSoft}}">
 <div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 22px; text-align: center">
 <span style="display: inline-flex; align-items: center; min-height: 28px; padding: 0 12px; border-radius: 999px; background: #120009; color: #ffffff; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase">Flash Day</span>
 <span style="font-size: 17px; font-weight: 600; letter-spacing: 0.06em">Saturday, [Date] · Pre-drawn flash from [$PRICE] · Walk-ins welcome, first come first served</span>
@@ -72,7 +55,7 @@ body{margin:0}
 <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-color: rgba(0,0,0,0.5); background-image: radial-gradient(ellipse 60% 45% at 50% 22%, rgba(255,63,176,0.10), transparent 70%), linear-gradient(to bottom, rgba(0,0,0,0.55) 0px, transparent 140px, transparent calc(100% - 220px), rgba(0,0,0,0.6) calc(100% - 90px), #000000 100%)"></div>
 <div style="position: relative; z-index: 1">
 <section id="top" aria-label="Neon sign" style="position: relative; min-height: 720px; display: flex; align-items: center; justify-content: center; padding: 72px 16px; box-sizing: border-box; overflow: hidden">
-<div class="sign on" style="--neon: #ff3fb0; position: relative; width: 100%; max-width: 960px">
+<div class="sign {{signState}}" style="--neon: {{neon}}; position: relative; width: 100%; max-width: 960px">
 <svg class="layer-board" viewBox="0 0 1000 610" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; width: 100%; height: auto; overflow: visible">
 <defs>
 <linearGradient id="acrylicSheen" gradientUnits="userSpaceOnUse" x1="80" y1="60" x2="920" y2="540">
@@ -107,7 +90,7 @@ body{margin:0}
 </mask>
 </defs>
 <g class="board">
-<g opacity="0.07">
+<g opacity="{{boardOpacity}}">
 <g filter="url(#bubbleBoard)" fill="url(#acrylicSheen)" stroke="url(#acrylicSheen)" stroke-linecap="round" stroke-linejoin="round">
 <use href="#signLine1" stroke-width="70"></use>
 <use href="#signLine2" stroke-width="74"></use>
@@ -116,7 +99,7 @@ body{margin:0}
 <rect x="70" y="395" width="860" height="110" rx="8" stroke="none"></rect>
 </g>
 </g>
-<rect x="-200" y="-200" width="1400" height="960" fill="#ffffff" opacity="0.21" mask="url(#acrylicEdge)"></rect>
+<rect x="-200" y="-200" width="1400" height="960" fill="#ffffff" opacity="{{edgeOpacity}}" mask="url(#acrylicEdge)"></rect>
 </g>
 </svg>
 <svg class="layer-letters" viewBox="0 0 1000 610" role="img" aria-label="Neon sign reading Alukx Alexi Tattoo" style="position: relative; display: block; width: 100%; height: auto; overflow: visible">
@@ -125,18 +108,18 @@ body{margin:0}
 <path id="signLine2" transform="translate(0 50)" d="M43 305 H153 M98 305 V495 M175 495 L270 305 L270 495 M205 435 H270 M292 305 H402 M347 305 V495 M424 305 H534 M479 305 V495 M556 400 A95 95 0 1 0 746 400 A95 95 0 1 0 556 400"></path>
 <path id="signLastO" transform="translate(0 50)" d="M768 400 A95 95 0 1 0 958 400 A95 95 0 1 0 768 400"></path>
 </defs>
-<g class="tubes" fill="none" stroke="#ff3fb0" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 3px #ff3fb0) drop-shadow(0 0 10px #ff3fb0) drop-shadow(0 0 24px rgba(255,63,176,0.85)) drop-shadow(0 0 48px rgba(255,63,176,0.6))">
+<g class="tubes" fill="none" stroke="{{neon}}" stroke-linecap="round" stroke-linejoin="round" style="filter: {{glow}}">
 <use href="#signLine1" stroke-width="9"></use>
 <use href="#signLine2" stroke-width="13"></use>
 <use class="buzz" href="#signLastO" stroke-width="13"></use>
 </g>
 <g class="tubes" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<g stroke="rgb(255,159,216)">
+<g stroke="{{tubeMid}}">
 <use href="#signLine1" stroke-width="5.5"></use>
 <use href="#signLine2" stroke-width="8"></use>
 <use class="buzzCore" href="#signLastO" stroke-width="8"></use>
 </g>
-<g stroke="rgb(255,232,246)">
+<g stroke="{{tubeCore}}">
 <use href="#signLine1" stroke-width="2.2"></use>
 <use href="#signLine2" stroke-width="3.5"></use>
 <use class="buzzCore" href="#signLastO" stroke-width="3.5"></use>
@@ -156,109 +139,38 @@ body{margin:0}
 <span aria-hidden="true" style="color: #5a3a4e">|</span>
 <a href="#faq" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #f7e6f1; text-decoration: none">FAQ</a>
 </div>
-<a href="booking.html" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 40px; border-radius: 999px; background: #ff3fb0; color: #120009; text-decoration: none; font-size: 17px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; box-shadow: 0 0 28px rgba(255,63,176,0.45)">Book now</a>
+<a href="book.html" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 40px; border-radius: 999px; background: {{neon}}; color: #120009; text-decoration: none; font-size: 17px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; box-shadow: 0 0 28px {{neonSoft}}">Book now</a>
 </nav>
 
 <section id="about" aria-labelledby="aboutTitle" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px 0; align-items: center">
-<h2 id="aboutTitle" style="flex: 1 1 100%; margin: 0; text-align: center; color: rgb(255,232,246); font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px #ff3fb0, 0 0 18px #ff3fb0, 0 0 40px rgba(255,63,176,0.45), 0 0 80px rgba(255,63,176,0.45)">About me</h2>
+<h2 id="aboutTitle" style="flex: 1 1 100%; margin: 0; text-align: center; color: {{tubeCore}}; font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 40px {{neonSoft}}, 0 0 80px {{neonSoft}}">About me</h2>
 <img src="images/alexi-cutout.png" alt="Alexi tattooing a client" style="position: relative; z-index: 1; flex: 1 1 320px; display: block; width: 100%; max-width: 440px; height: auto; align-self: center; filter: drop-shadow(0 18px 24px rgba(0,0,0,0.55)); -webkit-mask-image: linear-gradient(to bottom, #000000 82%, transparent 100%); mask-image: linear-gradient(to bottom, #000000 82%, transparent 100%)">
 <div style="flex: 999 1 420px; min-width: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 20px; box-sizing: border-box; margin-bottom: -96px; padding: 44px 48px 150px; background: #000000; border: 1px solid #3a2232; border-bottom: none; border-radius: 16px 16px 0 0; box-shadow: 0 -12px 40px rgba(0,0,0,0.6); -webkit-mask-image: linear-gradient(to bottom, #000000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000000 62%, transparent 100%)">
 <h3 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 200; letter-spacing: 0.02em">Hi, I'm Alexi.</h3>
 <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #ece6ea">Alexi has rewatched <em>It’s Always Sunny in Philadelphia</em> more times than she’s tattooed a rose, and she’s tattooed a <em>lot</em> of roses. Ask her for a Kitten Mittens flash piece. She’ll say no. She’ll think about it all week.</p>
 <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #ece6ea">Fair warning: you’ll leave with fresh ink and a free therapy session. She is, scientifically, the easiest person in town to vent to about how much men suck. No judgment, just a buzzing needle and a very supportive nod.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; padding-top: 8px">
-<a href="#book" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; background: #ff3fb0; color: #120009; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 15px">Request a booking</a>
+<a href="about.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 15px">More about me</a>
+<a href="#book" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; background: {{neon}}; color: #120009; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 15px">Request a booking</a>
 </div>
 </div>
 </section>
 </div>
 </div>
 
-<section aria-label="Client reviews" style="background: #000000">
-<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 96px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
-<h3 style="margin: 0; color: rgb(255,232,246); font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px #ff3fb0, 0 0 18px #ff3fb0, 0 0 40px rgba(255,63,176,0.45), 0 0 80px rgba(255,63,176,0.45)"><a href="client-reviews.html" style="color: inherit; text-decoration: none">What clients say</a></h3>
-<a href="client-reviews.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; text-decoration: none; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase">Read all reviews<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-<div aria-live="polite" style="--neon: #ff3fb0; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 36px 0; padding: 12px 0 48px">
-<figure class="bubble" style="margin: 0; padding: 30px 32px; display: flex; flex-direction: column; gap: 12px; color: #120009; transform: translateY(28px) rotate(-3deg); z-index: 1; box-shadow: 8px 8px 0 #120009, 8px 8px 0 3px #ff3fb0">
-<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 18px; letter-spacing: 4px">★★★★★</span>
-<blockquote style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 600">She tattooed Dayman on my arm and didn't ask a single question. Fighter of the Nightman approved.</blockquote>
-<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Charlie K. · Custom</figcaption>
-</figure>
-<figure class="bubble tail-c" style="margin: 0; padding: 30px 32px; display: flex; flex-direction: column; gap: 12px; color: #120009; transform: translateY(-6px) rotate(1.5deg); z-index: 3; box-shadow: 8px 8px 0 #120009, 8px 8px 0 3px #ff3fb0">
-<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 18px; letter-spacing: 4px">★★★★★</span>
-<blockquote style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 600">Flawless linework. Almost as flawless as me. Five stars, obviously.</blockquote>
-<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Dennis R. · Fine-line</figcaption>
-</figure>
-<figure class="bubble tail-r" style="margin: 0; padding: 30px 32px; display: flex; flex-direction: column; gap: 12px; color: #120009; transform: translateY(40px) rotate(3deg); z-index: 2; box-shadow: 8px 8px 0 #120009, 8px 8px 0 3px #ff3fb0">
-<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 18px; letter-spacing: 4px">★★★★★</span>
-<blockquote style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 600">Got a Rum Ham on my calf. Best money I've spent since the egg business.</blockquote>
-<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Frank R. · Flash Day</figcaption>
-</figure>
-</div>
-<img class="crowd" src="images/photo-228c6f3c.jpg" alt="Pop-art illustration of three tattooed women in pink and black" style="display: block; width: 100%; max-width: 1160px; height: auto; margin: -20px auto 0; align-self: center">
-</div>
-</section>
-
-
-<section id="work" aria-labelledby="workTitle" class="wallbg" style="position: relative; overflow: hidden; font-family: 'Josefin Sans', system-ui, sans-serif; color: #f7e6f1">
-<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(ellipse 30% 45% at 20% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 32% 50% at 50% 0%, rgba(230,236,255,0.22), transparent 75%), radial-gradient(ellipse 30% 45% at 80% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 120% 95% at 50% 40%, transparent 55%, rgba(0,0,0,0.5))"></div>
-<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(to bottom, #000000 0px, rgba(0,0,0,0.85) 40px, rgba(0,0,0,0.4) 110px, transparent 190px, transparent calc(100% - 190px), rgba(0,0,0,0.4) calc(100% - 110px), rgba(0,0,0,0.85) calc(100% - 40px), #000000 100%)"></div>
-<div style="position: relative; z-index: 1; padding: 80px 32px 88px; display: flex; flex-direction: column; gap: 48px">
-<div style="align-self: center; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; max-width: 900px">
-<div class="sign off" id="workSign" style="--neon: #38e1ff; position: relative; width: 100%">
-<svg class="layer-board" viewBox="0 0 1000 260" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; width: 100%; height: auto; overflow: visible">
-<defs>
-<mask id="workEdge" maskUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="660">
-<g filter="url(#bubbleBoard)" fill="#ffffff" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
-<use href="#workLine" stroke-width="74"></use><rect x="40" y="98" width="920" height="64" rx="10" stroke="none"></rect>
-</g>
-<g filter="url(#bubbleBoard)" fill="#000000" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
-<use href="#workLine" stroke-width="70"></use><rect x="42" y="100" width="916" height="60" rx="8" stroke="none"></rect>
-</g>
-</mask>
-</defs>
-<g class="board">
-<g opacity="0.07"><g filter="url(#bubbleBoard)" fill="url(#acrylicSheen)" stroke="url(#acrylicSheen)" stroke-linecap="round" stroke-linejoin="round">
-<use href="#workLine" stroke-width="70"></use><rect x="42" y="100" width="916" height="60" rx="8" stroke="none"></rect>
-</g></g>
-<rect x="-200" y="-200" width="1400" height="660" fill="#ffffff" opacity="0.21" mask="url(#workEdge)"></rect>
-</g>
-</svg>
-<svg class="layer-letters" viewBox="0 0 1000 260" role="img" aria-labelledby="workTitle" style="position: relative; display: block; width: 100%; height: auto; overflow: visible">
-<title id="workTitle">Recent Work</title>
-<defs><path id="workLine" d="M61 190 V70 H96 A30 30 0 0 1 96 130 H61 M91 130 L121 190 M207 70 H147 V190 H207 M147 130 H197 M291 88 A48 60 0 1 0 291 172 M379 70 H319 V190 H379 M319 130 H369 M405 190 V70 L465 190 V70 M491 70 H551 M521 70 V190 M611 70 L626 190 L646 110 L666 190 L681 70 M737 70 A30 60 0 1 0 737 190 A30 60 0 1 0 737 70 M793 190 V70 H828 A30 30 0 0 1 828 130 H793 M823 130 L853 190 M879 70 V190 M937 70 L881 138 M901 114 L939 190"></path></defs>
-<g class="tubes" fill="none" stroke="#38e1ff" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 3px #38e1ff) drop-shadow(0 0 10px #38e1ff) drop-shadow(0 0 24px rgba(56,225,255,0.85)) drop-shadow(0 0 48px rgba(56,225,255,0.6))">
-<use href="#workLine" stroke-width="9"></use>
-</g>
-<g class="tubes" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<use href="#workLine" stroke="rgb(156,240,255)" stroke-width="5.5"></use>
-<use href="#workLine" stroke="rgb(231,251,255)" stroke-width="2.2"></use>
-</g>
-</svg>
-</div>
-<p style="margin: 0; color: rgb(231,251,255); font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; text-align: center; text-shadow: 0 0 6px #38e1ff, 0 0 16px #38e1ff, 0 0 34px rgba(56,225,255,0.5)">Fresh Ink to Beautifully Healed</p>
-</div>
-<div class="gallery" id="galleryWall" data-wall="gallery" style="position: relative; width: 100%"></div>
-
-</div>
-</section>
-
+<dc-import name="Gallery_Wall"></dc-import>
 
 <div class="dealsfaq" style="position: relative; overflow: hidden; background: #000000">
-<div aria-hidden="true" style="position: absolute; inset: 0">
-<div id="stickerWall" data-wall="stickers" style="position: relative; width: 100%; height: 100%; min-height: 1700px; overflow: hidden; background-color: #000000"></div>
-</div>
+<div aria-hidden="true" style="position: absolute; inset: 0"><dc-import name="Sticker_Wall"></dc-import></div>
 <div aria-hidden="true" style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.6); background-image: linear-gradient(to bottom, #000000 0px, rgba(0,0,0,0.6) 70px, transparent 180px, transparent calc(100% - 180px), rgba(0,0,0,0.6) calc(100% - 70px), #000000 100%)"></div>
 <section id="deals" aria-labelledby="dealsTitle" style="position: relative; z-index: 1">
 <div style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 88px 24px 104px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
-<h2 id="dealsTitle" style="margin: 0; color: rgb(255,232,246); font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px #ff3fb0, 0 0 18px #ff3fb0, 0 0 40px rgba(255,63,176,0.45), 0 0 80px rgba(255,63,176,0.45)">Special deals</h2>
+<h2 id="dealsTitle" style="margin: 0; color: {{tubeCore}}; font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 40px {{neonSoft}}, 0 0 80px {{neonSoft}}">Special deals</h2>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #d9c3d1; max-width: 640px">Not every tattoo needs a big consult. Catch a flash day or one of the special days for something small, quick and a little cheaper.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px 40px; padding: 0 12px">
-<article style="border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 12px; background: #ff3fb0; color: #120009; box-shadow: 0 0 0 8px #ffffff, 0 20px 34px rgba(0,0,0,0.7); transform: rotate(-4deg)">
+<article style="border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 12px; background: {{neon}}; color: #120009; box-shadow: 0 0 0 8px #ffffff, 0 20px 34px rgba(0,0,0,0.7); transform: rotate(-4deg)">
 <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 12px; border-radius: 999px; background: #120009; color: #ffffff; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase">Next up</span>
 <h3 style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em">Flash Tattoo Day</h3>
 <p style="margin: 0; font-size: 17px; line-height: 1.5; font-weight: 400">Pick a pre-drawn design off the flash sheet and get it done the same day. Walk-ins welcome, first come first served.</p>
@@ -280,34 +192,35 @@ body{margin:0}
 
 <section id="faq" aria-labelledby="faqTitle" style="position: relative; z-index: 1; box-sizing: border-box; width: calc(100% - 48px); max-width: 1200px; margin: 96px auto; padding: 56px 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; background: #000000; border: 1px solid #3a2232; border-radius: 16px; box-shadow: 0 24px 48px rgba(0,0,0,0.7)">
 <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-<h2 id="faqTitle" style="margin: 0; text-align: center; color: rgb(255,232,246); font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px #ff3fb0, 0 0 18px #ff3fb0, 0 0 40px rgba(255,63,176,0.45), 0 0 80px rgba(255,63,176,0.45)">FAQs</h2>
+<h2 id="faqTitle" style="margin: 0; text-align: center; color: {{tubeCore}}; font-size: 96px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 40px {{neonSoft}}, 0 0 80px {{neonSoft}}">FAQs</h2>
 <div style="display: flex; flex-direction: column; border-top: 1px solid #3a2a34">
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How does booking work?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Tap Book Now and send a request with your idea, placement, size and any reference photos. Alexi takes one client a day, so she reviews every request personally, then sends back a price estimate and deposit info. Your date is locked in once the deposit is paid.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How does the deposit work?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">The deposit is [$AMOUNT] and it goes toward the final price of your tattoo. It's non-refundable, but it can move with you once if you reschedule with at least 48 hours' notice.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Can I reschedule or cancel?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Life happens. Reschedule with 48+ hours' notice and your deposit carries over. Cancellations or no-shows with less than 48 hours' notice forfeit the deposit.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How should I prepare for my appointment?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Eat a real meal, drink plenty of water, get a good night's sleep and skip alcohol for 24 hours before. Wear comfy clothes that give easy access to the placement, and bring a valid photo ID.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Does it hurt?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Honestly? A little. Most people compare it to an annoying cat scratch. Ribs, feet and spine are spicier. Breaks are always allowed, and snacks are encouraged.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How do I take care of my new tattoo?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Keep the wrap on for [X hours], then wash gently with unscented soap and apply a thin layer of aftercare. No soaking, tanning or picking for 2–3 weeks. You'll leave with full written instructions.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Do you do cover-ups or touch-ups?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Yes to cover-ups: send a clear photo of the old tattoo with your request so Alexi can plan. Touch-ups on her own work are free within [3 months] of your appointment.</p></details>
-<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Do I need to be 18?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: #ff3fb0"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Yes. You must be 18 or older with a valid government-issued photo ID. No exceptions, even with a parent present.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How does booking work?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Tap Book Now and send a request with your idea, placement, size and any reference photos. Alexi takes one client a day, so she reviews every request personally, then sends back a price estimate and deposit info. Your date is locked in once the deposit is paid.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How does the deposit work?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">The deposit is [$AMOUNT] and it goes toward the final price of your tattoo. It's non-refundable, but it can move with you once if you reschedule with at least 48 hours' notice.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Can I reschedule or cancel?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Life happens. Reschedule with 48+ hours' notice and your deposit carries over. Cancellations or no-shows with less than 48 hours' notice forfeit the deposit.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How should I prepare for my appointment?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Eat a real meal, drink plenty of water, get a good night's sleep and skip alcohol for 24 hours before. Wear comfy clothes that give easy access to the placement, and bring a valid photo ID.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Does it hurt?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Honestly? A little. Most people compare it to an annoying cat scratch. Ribs, feet and spine are spicier. Breaks are always allowed, and snacks are encouraged.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">How do I take care of my new tattoo?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Keep the wrap on for [X hours], then wash gently with unscented soap and apply a thin layer of aftercare. No soaking, tanning or picking for 2–3 weeks. You'll leave with full written instructions.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Do you do cover-ups or touch-ups?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Yes to cover-ups: send a clear photo of the old tattoo with your request so Alexi can plan. Touch-ups on her own work are free within [3 months] of your appointment.</p></details>
+<details style="border-bottom: 1px solid #3a2a34; padding: 24px 0"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-size: 22px; font-weight: 600; color: #ffffff">Do I need to be 18?<svg class="chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 14px 0 0; font-size: 18px; line-height: 1.7; font-weight: 400; color: #ece6ea">Yes. You must be 18 or older with a valid government-issued photo ID. No exceptions, even with a parent present.</p></details>
 </div>
+<a href="faq.html" style="align-self: center; display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 15px">See all FAQs on one page</a>
 </div>
-<div class="sign on" style="--neon: #ff3fb0; flex: 1 1 280px; max-width: 400px; margin: 0 auto; order: -1">
+<div class="sign {{signState}}" style="--neon: {{neon}}; flex: 1 1 280px; max-width: 400px; margin: 0 auto; order: -1">
 <svg viewBox="0 0 360 620" role="img" aria-label="Neon sign shaped like a tattoo machine" style="display: block; width: 100%; height: auto; overflow: visible; transform: rotate(-12deg)">
 <defs>
 <path id="gunBody" d="M111 110 H149 A16 16 0 0 1 165 126 V234 A16 16 0 0 1 149 250 H111 A16 16 0 0 1 95 234 V126 A16 16 0 0 1 111 110 Z M103 145 H157 M103 170 H157 M103 195 H157 M103 220 H157 M211 110 H249 A16 16 0 0 1 265 126 V234 A16 16 0 0 1 249 250 H211 A16 16 0 0 1 195 234 V126 A16 16 0 0 1 211 110 Z M203 145 H257 M203 170 H257 M203 195 H257 M203 220 H257 M85 92 H275 V60 M255 56 H305 M290 56 V31 M281 22 A9 9 0 1 0 299 22 A9 9 0 1 0 281 22 M80 270 H300 V100 M160 270 V315 H200 V270 M165 315 V480 M195 315 V480 M165 345 H195 M165 370 H195 M165 395 H195 M165 420 H195 M165 445 H195 M158 480 H202 M168 480 L180 548 L192 480"></path>
 <path id="gunNeedle" d="M180 560 V606"></path>
 </defs>
-<g class="tubes" fill="none" stroke="#ff3fb0" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 3px #ff3fb0) drop-shadow(0 0 10px #ff3fb0) drop-shadow(0 0 24px rgba(255,63,176,0.85)) drop-shadow(0 0 48px rgba(255,63,176,0.6))">
+<g class="tubes" fill="none" stroke="{{neon}}" stroke-linecap="round" stroke-linejoin="round" style="filter: {{glow}}">
 <use href="#gunBody" stroke-width="8"></use>
 <use class="buzz" href="#gunNeedle" stroke-width="8"></use>
 </g>
 <g class="tubes" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<g stroke="rgb(255,159,216)">
+<g stroke="{{tubeMid}}">
 <use href="#gunBody" stroke-width="5"></use>
 <use class="buzzCore" href="#gunNeedle" stroke-width="5"></use>
 </g>
-<g stroke="rgb(255,232,246)">
+<g stroke="{{tubeCore}}">
 <use href="#gunBody" stroke-width="2"></use>
 <use class="buzzCore" href="#gunNeedle" stroke-width="2"></use>
 </g>
@@ -321,7 +234,7 @@ body{margin:0}
 <div style="max-width: 900px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
 <h2 id="bookTitle" style="margin: 0; font-size: 44px; font-weight: 200">Ready for your next piece?</h2>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #d9c3d1; max-width: 620px">One client a day. Send a request, Alexi reviews it and sends a price estimate with deposit info. Your date is locked once the deposit is paid.</p>
-<a href="booking.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 34px; border-radius: 999px; background: #ff3fb0; color: #120009; text-decoration: none; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 16px; box-shadow: 0 0 24px rgba(255,63,176,0.45)">Request a date</a>
+<a href="book.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 34px; border-radius: 999px; background: {{neon}}; color: #120009; text-decoration: none; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 16px; box-shadow: 0 0 24px {{neonSoft}}">Request a date</a>
 </div>
 </section>
 
@@ -331,21 +244,95 @@ body{margin:0}
 <span style="font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400">Alukx Alexi Tattoo</span>
 <span style="font-size: 15px; color: #b9a3b1">[Studio address] · [Hours]</span>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#top" aria-label="Instagram" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg></a>
-<a href="#top" aria-label="TikTok" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.5 2.5 2.5 4.5 5 5"></path></svg></a>
-<a href="#top" aria-label="Email" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a>
-</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="#top" aria-label="Instagram" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg></a><a href="#top" aria-label="TikTok" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.5 2.5 2.5 4.5 5 5"></path></svg></a><a href="#top" aria-label="Email" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a></div>
 </div>
 </footer>
 
 </div>
-
-
+</template>
+<template id="dc-Gallery_Wall">
+<section id="work" aria-labelledby="workTitle" class="wallbg" style="position: relative; overflow: hidden; font-family: 'Josefin Sans', system-ui, sans-serif; color: #f7e6f1">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-color: rgba(0,0,0,0.5); background-image: radial-gradient(ellipse 30% 45% at 20% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 32% 50% at 50% 0%, rgba(230,236,255,0.22), transparent 75%), radial-gradient(ellipse 30% 45% at 80% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 120% 95% at 50% 40%, transparent 55%, rgba(0,0,0,0.5))"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(to bottom, #000000 0px, rgba(0,0,0,0.85) 40px, rgba(0,0,0,0.4) 110px, transparent 190px, transparent calc(100% - 190px), rgba(0,0,0,0.4) calc(100% - 110px), rgba(0,0,0,0.85) calc(100% - 40px), #000000 100%)"></div>
+<div style="position: relative; z-index: 1; padding: 80px 32px 88px; display: flex; flex-direction: column; gap: 48px">
+<div style="align-self: center; width: 100%; max-width: 820px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px">
+<h2 id="workTitle" style="margin: 0; width: 100%; line-height: 0">
+<svg class="rwSign" viewBox="0 40 1000 260" role="img" aria-label="Neon sign reading Recent Work" style="display: block; width: 100%; height: auto; overflow: visible">
+<defs>
+<path id="rwgLine" d="M46 230 V110 H76 A30 30 0 0 1 76 170 H46 M76 170 L106 230 M186 110 H136 V230 H186 M136 170 H178 M276 140 A30 30 0 0 0 216 140 V200 A30 30 0 0 0 276 200 M356 110 H306 V230 H356 M306 170 H348 M386 230 V110 L446 230 V110 M476 110 H536 M506 110 V230 M606 110 L626 230 L646 130 L666 230 L686 110 M716 140 A30 30 0 0 1 776 140 V200 A30 30 0 0 1 716 200 Z M806 230 V110 H836 A30 30 0 0 1 836 170 H806 M836 170 L866 230 M896 110 V230 M951 110 L897 172 L954 230"></path>
+<linearGradient id="rwgSheen" gradientUnits="userSpaceOnUse" x1="40" y1="60" x2="960" y2="290"><stop offset="0" stop-color="#d9d9df"></stop><stop offset="0.3" stop-color="#c4c4cc"></stop><stop offset="0.38" stop-color="#ffffff"></stop><stop offset="0.46" stop-color="#c4c4cc"></stop><stop offset="0.72" stop-color="#b8b8c0"></stop><stop offset="0.78" stop-color="#f2f2f6"></stop><stop offset="0.84" stop-color="#b8b8c0"></stop><stop offset="1" stop-color="#cdcdd4"></stop></linearGradient>
+<filter id="rwgBlob" filterUnits="userSpaceOnUse" x="-100" y="-80" width="1200" height="500" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9"></feGaussianBlur><feComponentTransfer><feFuncA type="linear" slope="14" intercept="-6.5"></feFuncA></feComponentTransfer></filter>
+<mask id="rwgEdge" maskUnits="userSpaceOnUse" x="-100" y="-80" width="1200" height="500">
+<g filter="url(#rwgBlob)" fill="#ffffff" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"><use href="#rwgLine" fill="none" stroke-width="74"></use><rect x="62" y="123" width="876" height="94" rx="10" stroke="none"></rect></g>
+<g filter="url(#rwgBlob)" fill="#000000" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"><use href="#rwgLine" fill="none" stroke-width="70"></use><rect x="64" y="125" width="872" height="90" rx="8" stroke="none"></rect></g>
+</mask>
+</defs>
+<g class="board"><g opacity="0.14"><g filter="url(#rwgBlob)" fill="url(#rwgSheen)" stroke="url(#rwgSheen)" stroke-linecap="round" stroke-linejoin="round"><use href="#rwgLine" fill="none" stroke-width="70"></use><rect x="64" y="125" width="872" height="90" rx="8" stroke="none"></rect></g></g>
+<rect x="-100" y="-80" width="1200" height="500" fill="#ffffff" opacity="0.4" mask="url(#rwgEdge)"></rect></g>
+<g class="tubes" fill="none" stroke="#89cff0" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 3px #89cff0) drop-shadow(0 0 10px #89cff0) drop-shadow(0 0 24px rgba(137,207,240,0.85)) drop-shadow(0 0 48px rgba(137,207,240,0.6))"><use href="#rwgLine" stroke-width="9"></use></g>
+<g class="tubes" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#rwgLine" stroke="#c4e7f8" stroke-width="5.5"></use><use href="#rwgLine" stroke="#f1f9fd" stroke-width="2.2"></use></g>
+</svg>
+</h2>
+<p style="margin: 0; font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #f1f9fd; text-shadow: 0 0 6px #89cff0, 0 0 18px rgba(137,207,240,0.8)">Fresh Ink to Beautifully Healed</p>
+</div>
+<div class="gallery" id="galleryWall" data-wall="gallery" style="position: relative; width: 100%"></div>
+<a href="work.html" style="align-self: center; display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 2px 32px 0; border-radius: 8px; background-color: #0b0b10; background-image: linear-gradient(180deg, #17171f, #07070a); box-shadow: inset 0 0 0 2px #c9a24a, 0 12px 20px rgba(0,0,0,0.55); color: #f0d589; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase">See all recent work<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</section>
+</template>
+<template id="dc-Sticker_Wall">
+<div id="stickerWall" data-wall="stickers" style="position: relative; width: 100%; height: 100%; min-height: 1700px; overflow: hidden; background-color: #000000"></div>
+</template>
+<script src="assets/js/dc.js"></script>
 <script>
-(function(){var el=document.getElementById('workSign');if(!el)return;
-if(!('IntersectionObserver' in window)){el.className='sign on';return;}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){el.classList.remove('off');el.classList.add('on');io.disconnect();}});},{threshold:0.4});io.observe(el);})();
+DC.define("Site_w_Plastic", {"neon": "#ff3fb0", "glowStrength": 1, "boardOpacity": 0.07}, (function () {
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { on: true };
+  }
+  hexToRgb(hex) {
+    const h = (hex || '#ff3fb0').replace('#', '');
+    const n = parseInt(h.length === 3 ? h.split('').map((c) => c + c).join('') : h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  renderVals() {
+    const neon = this.props.neon ?? '#ff3fb0';
+    const k = this.props.glowStrength ?? 1;
+    const [r, g, b] = this.hexToRgb(neon);
+    const c = (a) => `rgba(${r},${g},${b},${a})`;
+    const mix = (t) => `rgb(${Math.round(r + (255 - r) * t)},${Math.round(g + (255 - g) * t)},${Math.round(b + (255 - b) * t)})`;
+    const board = this.props.boardOpacity ?? 0.07;
+    return {
+      signState: this.state.on ? 'on' : 'off',
+      neon,
+      neonSoft: c(0.45),
+      neonText: mix(0.45),
+      tubeMid: mix(0.5),
+      tubeCore: mix(0.88),
+      glow: `drop-shadow(0 0 ${3 * k}px ${neon}) drop-shadow(0 0 ${10 * k}px ${neon}) drop-shadow(0 0 ${24 * k}px ${c(0.85)}) drop-shadow(0 0 ${48 * k}px ${c(0.6)})`,
+      boardOpacity: board,
+      edgeOpacity: Math.min(0.6, board * 3)
+    };
+  }
+}
+
+return Component;
+})());
+DC.define("Gallery_Wall", {}, (function () {
+
+class Component extends DCLogic {}
+
+return Component;
+})());
+DC.define("Sticker_Wall", {}, (function () {
+
+class Component extends DCLogic {}
+
+return Component;
+})());
+DC.mount("Site_w_Plastic", document.getElementById('app'));
 </script>
 <script src="data/catalog.js"></script>
 <script src="data/layout.js"></script>

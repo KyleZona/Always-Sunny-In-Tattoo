@@ -6,7 +6,7 @@
 
   var css = document.createElement('style');
   css.textContent =
-    '[data-wall]{container-type:inline-size}' +
+    '[data-wall]{container-type:inline-size;isolation:isolate}' +
     '.w-item{position:absolute;transform-origin:50% 50%}' +
     '.w-item img{display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}' +
     '.w-frame .w-photo{position:absolute;object-fit:cover}' +
@@ -65,7 +65,7 @@
   render('gallery');
   render('stickers');
 
-  if (/[?&]arrange\b/.test(location.search)) {
+  if (/[?&]arrange\b/.test(location.search) && document.querySelector('[data-wall="gallery"]')) {
     var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'assets/css/arrange.css';
     document.head.appendChild(l);
     var s = document.createElement('script'); s.src = 'assets/js/arrange.js';
