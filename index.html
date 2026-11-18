@@ -36,6 +36,31 @@ details[open] summary{color:#ffd0ec}
 @keyframes rwFlick{0%,10%{opacity:.12}11%{opacity:1}13%,24%{opacity:.12}25%{opacity:1}27%{opacity:.3}44%{opacity:.3}46%,100%{opacity:1}}
 @media (prefers-reduced-motion: reduce){.rwSign .tubes{animation:none}}
 .wallbg{background-color:#123a6b;background-image:url(images/wall-blue.jpg);background-size:cover;background-position:center}
+  /* ===== Mobile fixes ===== */
+
+/* 1. Neon headings: shrink to fit small screens, full 96px on desktop */
+#aboutTitle,
+#dealsTitle {
+  font-size: clamp(40px, 15vw, 96px) !important;
+  overflow-wrap: normal;
+}
+
+/* 2. Gallery wall: bigger frames on phones, swipe sideways to see them all */
+@media (max-width: 600px) {
+  :has(> #galleryWall) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 12px;
+  }
+  :has(> #galleryWall)::-webkit-scrollbar { display: none; }
+
+  #galleryWall {
+    width: 220% !important;
+    max-width: none;
+  }
+}
 </style>
 </head>
 <body>
