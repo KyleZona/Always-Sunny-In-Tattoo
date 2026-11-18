@@ -206,9 +206,39 @@ body{margin:0}
 <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(ellipse 30% 45% at 20% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 32% 50% at 50% 0%, rgba(230,236,255,0.22), transparent 75%), radial-gradient(ellipse 30% 45% at 80% 0%, rgba(230,236,255,0.18), transparent 75%), radial-gradient(ellipse 120% 95% at 50% 40%, transparent 55%, rgba(0,0,0,0.5))"></div>
 <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(to bottom, #000000 0px, rgba(0,0,0,0.85) 40px, rgba(0,0,0,0.4) 110px, transparent 190px, transparent calc(100% - 190px), rgba(0,0,0,0.4) calc(100% - 110px), rgba(0,0,0,0.85) calc(100% - 40px), #000000 100%)"></div>
 <div style="position: relative; z-index: 1; padding: 80px 32px 88px; display: flex; flex-direction: column; gap: 48px">
-<div style="align-self: center; position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 34px 72px 38px; border-radius: 14px; background-color: #0b0b10; background-image: linear-gradient(115deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.02) 28%, transparent 29%, transparent 62%, rgba(255,255,255,0.05) 63%, transparent 80%), linear-gradient(180deg, #17171f, #07070a); box-shadow: inset 0 0 0 2px #c9a24a, inset 0 0 0 9px #0b0b10, inset 0 0 0 10px #8a6a2b, 0 18px 30px rgba(0,0,0,0.6), 0 3px 6px rgba(0,0,0,0.5)">
-<h2 id="workTitle" class="goldleaf" style="margin: 0; padding: 0 12px 6px; font-family: 'Yesteryear', cursive; font-size: 96px; line-height: 1.1; font-weight: 400; transform: rotate(-3deg)">Recent Work</h2>
-<p class="goldleaf" style="margin: 0; font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; filter: drop-shadow(1px 2px 0 #2a1806)">Fresh Ink to Beautifully Healed</p>
+<div style="align-self: center; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; max-width: 900px">
+<div class="sign off" id="workSign" style="--neon: #38e1ff; position: relative; width: 100%">
+<svg class="layer-board" viewBox="0 0 1000 260" aria-hidden="true" style="position: absolute; left: 0; top: 0; display: block; width: 100%; height: auto; overflow: visible">
+<defs>
+<mask id="workEdge" maskUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="660">
+<g filter="url(#bubbleBoard)" fill="#ffffff" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+<use href="#workLine" stroke-width="74"></use><rect x="40" y="98" width="920" height="64" rx="10" stroke="none"></rect>
+</g>
+<g filter="url(#bubbleBoard)" fill="#000000" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+<use href="#workLine" stroke-width="70"></use><rect x="42" y="100" width="916" height="60" rx="8" stroke="none"></rect>
+</g>
+</mask>
+</defs>
+<g class="board">
+<g opacity="0.07"><g filter="url(#bubbleBoard)" fill="url(#acrylicSheen)" stroke="url(#acrylicSheen)" stroke-linecap="round" stroke-linejoin="round">
+<use href="#workLine" stroke-width="70"></use><rect x="42" y="100" width="916" height="60" rx="8" stroke="none"></rect>
+</g></g>
+<rect x="-200" y="-200" width="1400" height="660" fill="#ffffff" opacity="0.21" mask="url(#workEdge)"></rect>
+</g>
+</svg>
+<svg class="layer-letters" viewBox="0 0 1000 260" role="img" aria-labelledby="workTitle" style="position: relative; display: block; width: 100%; height: auto; overflow: visible">
+<title id="workTitle">Recent Work</title>
+<defs><path id="workLine" d="M61 190 V70 H96 A30 30 0 0 1 96 130 H61 M91 130 L121 190 M207 70 H147 V190 H207 M147 130 H197 M291 88 A48 60 0 1 0 291 172 M379 70 H319 V190 H379 M319 130 H369 M405 190 V70 L465 190 V70 M491 70 H551 M521 70 V190 M611 70 L626 190 L646 110 L666 190 L681 70 M737 70 A30 60 0 1 0 737 190 A30 60 0 1 0 737 70 M793 190 V70 H828 A30 30 0 0 1 828 130 H793 M823 130 L853 190 M879 70 V190 M937 70 L881 138 M901 114 L939 190"></path></defs>
+<g class="tubes" fill="none" stroke="#38e1ff" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 3px #38e1ff) drop-shadow(0 0 10px #38e1ff) drop-shadow(0 0 24px rgba(56,225,255,0.85)) drop-shadow(0 0 48px rgba(56,225,255,0.6))">
+<use href="#workLine" stroke-width="9"></use>
+</g>
+<g class="tubes" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<use href="#workLine" stroke="rgb(156,240,255)" stroke-width="5.5"></use>
+<use href="#workLine" stroke="rgb(231,251,255)" stroke-width="2.2"></use>
+</g>
+</svg>
+</div>
+<p style="margin: 0; color: rgb(231,251,255); font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; text-align: center; text-shadow: 0 0 6px #38e1ff, 0 0 16px #38e1ff, 0 0 34px rgba(56,225,255,0.5)">Fresh Ink to Beautifully Healed</p>
 </div>
 <div class="gallery" id="galleryWall" data-wall="gallery" style="position: relative; width: 100%"></div>
 
@@ -312,6 +342,11 @@ body{margin:0}
 </div>
 
 
+<script>
+(function(){var el=document.getElementById('workSign');if(!el)return;
+if(!('IntersectionObserver' in window)){el.className='sign on';return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){el.classList.remove('off');el.classList.add('on');io.disconnect();}});},{threshold:0.4});io.observe(el);})();
+</script>
 <script src="data/catalog.js"></script>
 <script src="data/layout.js"></script>
 <script src="assets/js/walls.js"></script>
