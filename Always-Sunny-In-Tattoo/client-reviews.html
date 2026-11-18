@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Reviews · Alukx Alexi Tattoo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000000}
+a{color:#ff9ad6}a:hover{color:#ffd0ec}
+button:focus-visible,a:focus-visible{outline:2px solid #ffd0ec;outline-offset:3px}
+.rbubble{position:relative;box-sizing:border-box;background-color:#fff7fc;background-image:radial-gradient(#ffd3ea 1.6px,transparent 1.7px);background-size:11px 11px;border:3px solid var(--neon);border-radius:26px;margin-bottom:22px}
+.rbubble::after{content:"";position:absolute;bottom:-16px;left:48px;width:24px;height:24px;background:#fff7fc;border-right:3px solid var(--neon);border-bottom:3px solid var(--neon);transform:rotate(45deg)}
+.rbubble.alt::after{left:auto;right:48px}
+</style>
+
+<style>html{scroll-behavior:smooth}</style>
+</head>
+<body>
+
+<div style="--neon: #ff3fb0; background-color: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-weight: 300; min-height: 100vh">
+
+<nav aria-label="Main" style="border-bottom: 1px solid #2a1a24">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #f7e6f1; text-decoration: none; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Back to home</a>
+<a href="booking.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 24px; border-radius: 999px; background: #ff3fb0; color: #120009; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase">Book now</a>
+</div>
+</nav>
+
+<header style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
+<h1 style="margin: 0; color: rgb(255,232,246); font-size: 64px; line-height: 1.05; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 4px #ff3fb0, 0 0 12px #ff3fb0, 0 0 28px rgba(255,63,176,0.45), 0 0 52px rgba(255,63,176,0.45)">Client reviews</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #d9c3d1; max-width: 620px">Straight from the people wearing the work.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; padding-top: 12px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+<span style="font-size: 40px; font-weight: 600; color: #ffffff">[4.9]</span>
+<span role="img" aria-label="Average rating placeholder, 5 stars shown" style="color: #ff3fb0; font-size: 18px; letter-spacing: 4px">★★★★★</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+<span style="font-size: 40px; font-weight: 600; color: #ffffff">[###]</span>
+<span style="font-size: 14px; color: #b9a3b1; letter-spacing: 0.14em; text-transform: uppercase">Reviews</span>
+</div>
+</div>
+</header>
+
+<section aria-label="Filter reviews" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
+<button type="button" aria-pressed="true" data-filter="All" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #ff3fb0; background: #ff3fb0; color: #120009; font-family: 'Josefin Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer">All</button>
+<button type="button" aria-pressed="false" data-filter="Custom" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #5a3a4e; background: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer">Custom</button>
+<button type="button" aria-pressed="false" data-filter="Flash Day" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #5a3a4e; background: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer">Flash Day</button>
+<button type="button" aria-pressed="false" data-filter="Friday the 13th" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #5a3a4e; background: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer">Friday the 13th</button>
+<button type="button" aria-pressed="false" data-filter="Cover-up" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #5a3a4e; background: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer">Cover-up</button>
+
+</section>
+
+<section aria-label="Reviews" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px 28px; align-items: start">
+<figure data-tag="Custom" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Custom</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">She tattooed Dayman on my arm and didn't ask a single question. Fighter of the Nightman approved.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Charlie Kelly</figcaption>
+</figure>
+<figure data-tag="Custom" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Custom</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Flawless linework. Almost as flawless as me. Five stars, obviously.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Dennis Reynolds</figcaption>
+</figure>
+<figure data-tag="Cover-up" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Cover-up</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Finally covered the bird the guys drew on me. Nobody's calling me a bird anymore. Probably.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Dee Reynolds</figcaption>
+</figure>
+<figure data-tag="Flash Day" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Flash Day</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Picked a flash piece of a guy doing a perfect karate kick. Extremely accurate. Of me.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Mac</figcaption>
+</figure>
+<figure data-tag="Friday the 13th" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Friday the 13th</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Got a Rum Ham on Friday the 13th. Best money I've spent since the egg business.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Frank Reynolds</figcaption>
+</figure>
+<figure data-tag="Friday the 13th" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Friday the 13th</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Asked for the spookiest rat she could draw. She delivered the spookiest rat.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Charlie Kelly</figcaption>
+</figure>
+<figure data-tag="Custom" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Custom</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">She didn't laugh at a single one of my characters. That's more than I can say for anyone else.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Dee Reynolds</figcaption>
+</figure>
+<figure data-tag="Flash Day" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Flash Day</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">The flash sheet is great, but frankly I should be on it.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Dennis Reynolds</figcaption>
+</figure>
+<figure data-tag="Cover-up" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Cover-up</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">She covered a tattoo I got in 'Nam. Don't remember getting it. Don't remember 'Nam.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Frank Reynolds</figcaption>
+</figure>
+<figure data-tag="Custom" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Custom</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Cleanest place I've been in years. Did not try to eat anything off the floor.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Rickety Cricket</figcaption>
+</figure>
+<figure data-tag="Custom" class="rbubble " style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Custom</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">I can't read the review form, but the tattoo is great. Ah-ah-ahh!</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Charlie Kelly</figcaption>
+</figure>
+<figure data-tag="Flash Day" class="rbubble alt" style="margin: 0 0 22px; padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; color: #120009; box-shadow: 7px 7px 0 #120009, 7px 7px 0 3px #ff3fb0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span role="img" aria-label="5 out of 5 stars" style="color: #d1007a; font-size: 17px; letter-spacing: 3px">★★★★★</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Flash Day</span>
+</div>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600">Got the same flash as Dennis so we'd match. He did not want to match.</blockquote>
+<figcaption style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5a1f42">Mac</figcaption>
+</figure>
+
+</div>
+<p id="noReviews" hidden style="margin: 24px 0 0; text-align: center; font-size: 17px; color: #b9a3b1">No reviews in this category yet.</p>
+</section>
+
+<section aria-labelledby="ctaTitle" style="border-top: 1px solid #2a1a24; background: #0b0509">
+<div style="max-width: 900px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<h2 id="ctaTitle" style="margin: 0; font-size: 40px; font-weight: 200">Want to be the next review?</h2>
+<a href="booking.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 34px; border-radius: 999px; background: #ff3fb0; color: #120009; text-decoration: none; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 16px; box-shadow: 0 0 24px rgba(255,63,176,0.45)">Request a date</a>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #2a1a24">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<span style="font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400">Alukx Alexi Tattoo</span>
+<span style="font-size: 15px; color: #b9a3b1">[Studio address] · [Hours]</span>
+</div>
+</footer>
+
+</div>
+
+<script>
+(function(){var chips=document.querySelectorAll('[data-filter]');var figs=document.querySelectorAll('figure[data-tag]');var none=document.getElementById('noReviews');
+chips.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-filter');var n=0;
+chips.forEach(function(c){var on=c===b;c.setAttribute('aria-pressed',on);c.style.background=on?'#ff3fb0':'#000000';c.style.color=on?'#120009':'#f7e6f1';c.style.borderColor=on?'#ff3fb0':'#5a3a4e';});
+figs.forEach(function(fg){var show=f==='All'||fg.getAttribute('data-tag')===f;fg.style.display=show?'':'none';if(show){fg.classList.toggle('alt',n%2===1);n++;}});
+if(none)none.hidden=n>0;});});})();
+</script>
+</body>
+</html>
