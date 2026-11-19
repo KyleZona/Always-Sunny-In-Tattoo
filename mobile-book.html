@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alukx Alexi Tattoo — Book now</title>
+<script>
+/* Wide screens get the full desktop site. Add ?mobile to stay here. */
+(function(){try{if(/[?&]mobile/.test(location.search))sessionStorage.setItem('siteView','mobile');if(/[?&]desktop/.test(location.search))sessionStorage.setItem('siteView','desktop');var v=sessionStorage.getItem('siteView');if(v==='mobile')return;}catch(e){}
+if(window.matchMedia('(min-width: 900px)').matches)location.replace('book.html'+location.hash);})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000000}
+a{color:#ff9ad6}a:hover{color:#ffd0ec}
+a:focus-visible,button:focus-visible{outline:2px solid #ffd0ec;outline-offset:3px}
+button{font-family:'Josefin Sans',system-ui,sans-serif;cursor:pointer}
+</style>
+<style>
+body{margin:0;background:#000000}
+.mr-root a{color:#ff9ad6}.mr-root a:hover{color:#ffd0ec}
+.mr-root a:focus-visible,.mr-root button:focus-visible,.mr-field:focus-visible{outline:2px solid #ffd0ec;outline-offset:3px}
+.mr-root button{font-family:'Josefin Sans',system-ui,sans-serif;cursor:pointer}
+.mr-field{box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border-radius:10px;border:1px solid #5a3a4e;background:#000000;color:#f7e6f1;font-family:'Josefin Sans',system-ui,sans-serif;font-size:16px}
+.mr-check{width:24px;height:24px;margin:0;flex:none;accent-color:#ff3fb0}
+</style>
+<style>
+body{margin:0;background:#000000}
+.md-root a{color:#ff9ad6}.md-root a:hover{color:#ffd0ec}
+.md-root a:focus-visible,.md-root button:focus-visible,.md-field:focus-visible{outline:2px solid #ffd0ec;outline-offset:3px}
+.md-root button{font-family:'Josefin Sans',system-ui,sans-serif;cursor:pointer}
+.md-field{box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border-radius:10px;border:1px solid #5a3a4e;background:#000000;color:#f7e6f1;font-family:'Josefin Sans',system-ui,sans-serif;font-size:16px}
+.strip{scrollbar-width:none}.strip::-webkit-scrollbar{display:none}
+.fl{background-color:#ffffff;background-size:contain;background-position:center;background-repeat:no-repeat}
+.fl-1{background-image:url(images/flash/fl-1.png)}
+.fl-2{background-image:url(images/flash/fl-2.png)}
+.fl-3{background-image:url(images/flash/fl-3.png)}
+.fl-4{background-image:url(images/flash/fl-4.png)}
+.fl-5{background-image:url(images/flash/fl-5.png)}
+.fl-6{background-image:url(images/flash/fl-6.png)}
+.fl-7{background-image:url(images/flash/fl-7.png)}
+.fl-8{background-image:url(images/flash/fl-8.png)}
+.fl-9{background-image:url(images/flash/fl-9.png)}
+.fl-10{background-image:url(images/flash/fl-10.png)}
+.fl-11{background-image:url(images/flash/fl-11.png)}
+.fl-12{background-image:url(images/flash/fl-12.png)}
+.fl-13{background-image:url(images/flash/fl-13.png)}
+.fl-14{background-image:url(images/flash/fl-14.png)}
+.fl-15{background-image:url(images/flash/fl-15.png)}
+.fl-16{background-image:url(images/flash/fl-16.png)}
+.fl-17{background-image:url(images/flash/fl-17.png)}
+.fl-18{background-image:url(images/flash/fl-18.png)}
+.fl-19{background-image:url(images/flash/fl-19.png)}
+.fl-20{background-image:url(images/flash/fl-20.png)}
+.fl-21{background-image:url(images/flash/fl-21.png)}
+.fl-22{background-image:url(images/flash/fl-22.png)}
+.fl-23{background-image:url(images/flash/fl-23.png)}
+.fl-24{background-image:url(images/flash/fl-24.png)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="dc-M_Book">
+<div style="width: 100%; max-width: 560px; margin: 0 auto; box-sizing: border-box; background-color: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-weight: 300">
+
+<sc-if value="{{isCal}}" hint-placeholder-val="{{true}}">
+<header style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; background: #000000; border-bottom: 1px solid #2a1a24">
+<a href="mobile.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #f7e6f1; text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase">Alukx Alexi</a>
+<button type="button" aria-label="Menu" aria-expanded="{{menuStr}}" onClick="{{toggleMenu}}" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid #5a3a4e; background: transparent; color: #f7e6f1; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
+</header>
+<sc-if value="{{menu}}" hint-placeholder-val="{{false}}">
+<nav aria-label="Main" style="display: flex; flex-direction: column; padding: 4px 16px 12px; background: #0b0509; border-bottom: 1px solid #2a1a24; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase">
+<a href="mobile.html" style="display: flex; align-items: center; min-height: 48px; color: #f7e6f1; text-decoration: none; border-bottom: 1px solid #2a1a24">Home</a>
+<a href="mobile-about.html" style="display: flex; align-items: center; min-height: 48px; color: #f7e6f1; text-decoration: none; border-bottom: 1px solid #2a1a24">About</a>
+<a href="mobile-work.html" style="display: flex; align-items: center; min-height: 48px; color: #f7e6f1; text-decoration: none; border-bottom: 1px solid #2a1a24">Recent work</a>
+<a href="mobile-faq.html" style="display: flex; align-items: center; min-height: 48px; color: #f7e6f1; text-decoration: none">FAQs</a>
+</nav>
+</sc-if>
+
+<main style="padding: 32px 16px 40px; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+<h1 style="margin: 0; color: {{tubeCore}}; font-size: 48px; line-height: 1; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 40px {{neonSoft}}">Book now</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; font-weight: 400; color: #d9c3d1">One client a day. Pick a day below.</p>
+</div>
+
+<ol aria-label="How it works" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid #3a2232; border-radius: 12px; background: #0b0509"><span style="font-size: 22px; font-weight: 600; color: {{neonText}}">1</span><span style="font-size: 14px; line-height: 1.4; font-weight: 400; color: #ece6ea">Pick one open day</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid #3a2232; border-radius: 12px; background: #0b0509"><span style="font-size: 22px; font-weight: 600; color: {{neonText}}">2</span><span style="font-size: 14px; line-height: 1.4; font-weight: 400; color: #ece6ea">Tell Alexi your idea</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid #3a2232; border-radius: 12px; background: #0b0509"><span style="font-size: 22px; font-weight: 600; color: {{neonText}}">3</span><span style="font-size: 14px; line-height: 1.4; font-weight: 400; color: #ece6ea">Approved? Venmo your deposit within 24 hrs</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid #3a2232; border-radius: 12px; background: #0b0509"><span style="font-size: 22px; font-weight: 600; color: {{neonText}}">4</span><span style="font-size: 14px; line-height: 1.4; font-weight: 400; color: #ece6ea">Get email (or text) reminders</span></li>
+</ol>
+
+<section aria-labelledby="daysTitle" style="display: flex; flex-direction: column; gap: 12px">
+<h2 id="daysTitle" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: {{neonText}}">Upcoming days</h2>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{days}}" as="d" hint-placeholder-count="8">
+<sc-if value="{{d.isOpen}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{d.pick}}" aria-label="{{d.aria}}" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; padding: 0 16px; border-radius: 12px; border: 1px solid {{neon}}; background: #0b0509; color: #f7e6f1; text-align: left">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 600">{{d.short}}</span><span style="font-size: 13px; font-weight: 400; color: #d9c3d1">Open · the whole day is yours</span></span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; color: {{neon}}"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+</sc-if>
+<sc-if value="{{d.isDeal}}" hint-placeholder-val="{{false}}">
+<button type="button" onClick="{{d.pick}}" aria-label="{{d.aria}}" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; padding: 0 16px; border-radius: 12px; border: 0; background: #ffe14d; color: #120009; text-align: left">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 600">★ {{d.short}}</span><span style="font-size: 13px; font-weight: 600">{{d.dealName}} · {{d.left}} spots left</span></span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+</sc-if>
+<sc-if value="{{d.isBooked}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid #2a1a24; color: #9a8592">
+<span style="font-size: 16px; font-weight: 400; text-decoration: line-through">{{d.short}}</span>
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase">Booked</span>
+</div>
+</sc-if>
+</sc-for>
+</div>
+<sc-if value="{{canMore}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{more}}" style="min-height: 48px; border-radius: 999px; border: 1px solid #5a3a4e; background: transparent; color: #f7e6f1; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase">Show more days</button>
+</sc-if>
+</section>
+
+<p style="margin: 0; padding: 14px 16px; border: 1px solid #3a2a34; border-radius: 12px; font-size: 14px; line-height: 1.55; font-weight: 400; color: #d9c3d1">AI art is welcome as inspiration. Your tattoo will be Alexi's own work, not AI.</p>
+</main>
+
+<footer style="padding: 28px 20px 36px; border-top: 1px solid #2a1a24; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<span style="font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400">Alukx Alexi Tattoo</span>
+<span style="font-size: 14px; color: #b9a3b1">[Studio address] · [Hours]</span>
+</footer>
+</sc-if>
+
+<sc-if value="{{isReq}}" hint-placeholder-val="{{false}}">
+<dc-import name="M_Book_Request" neon="{{neon}}" date-title="{{selTitle}}" on-back="{{back}}" hint-size="390px,1400px"></dc-import>
+</sc-if>
+<sc-if value="{{isDeal}}" hint-placeholder-val="{{false}}">
+<dc-import name="M_Book_Deal" neon="{{neon}}" date-title="{{selTitle}}" deal-name="{{selDeal}}" spots="{{spots}}" spots-left="{{selLeft}}" seed="{{selSeed}}" on-back="{{back}}" hint-size="390px,1900px"></dc-import>
+</sc-if>
+
+</div>
+</template>
+<template id="dc-M_Book_Request">
+<div class="mr-root" style="width: 100%; max-width: 560px; margin: 0 auto; box-sizing: border-box; background-color: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-weight: 300">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; border-bottom: 1px solid #2a1a24">
+<sc-if value="{{hasBack}}" hint-placeholder-val="{{false}}">
+<button type="button" onClick="{{back}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 10px; border-radius: 999px; border: 1px solid #5a3a4e; background: transparent; color: #f7e6f1; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Days</button>
+</sc-if>
+<sc-if value="{{noBack}}" hint-placeholder-val="{{true}}">
+<a href="mobile-book.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 10px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Days</a>
+</sc-if>
+<a href="mobile.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #f7e6f1; text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase">Alukx Alexi</a>
+</header>
+
+<main style="padding: 28px 16px 40px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: {{neonText}}">You're requesting</h1>
+<p style="margin: 0; font-size: 34px; line-height: 1.1; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: {{tubeCore}}; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 36px {{neonSoft}}">{{dateTitle}}</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; color: #d9c3d1">Not yours yet. Once Alexi approves it, the date is held 24 hours for your Venmo deposit.</p>
+</div>
+
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<section aria-live="polite" style="padding: 24px 20px; display: flex; flex-direction: column; gap: 12px; background: #0b0509; border: 1px solid #3a2232; border-radius: 16px">
+<h2 style="margin: 0; font-size: 26px; font-weight: 600; color: #ffffff">Request sent.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; font-weight: 400; color: #ece6ea">Watch your email. When it's approved, send your [$AMOUNT] deposit to [@VENMO-HANDLE] within 24 hours to lock it in.</p>
+</section>
+</sc-if>
+
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<section aria-label="Booking request form" style="padding: 22px 18px; display: flex; flex-direction: column; gap: 16px; background: #0b0509; border: 1px solid #3a2232; border-radius: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Your name<input class="mr-field" type="text" name="name" autocomplete="name"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Email<input class="mr-field" type="email" name="email" autocomplete="email"></label>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Placement<select class="mr-field" name="placement"><option value="">Choose</option><option>Head</option><option>Neck</option><option>Shoulders</option><option>Arms</option><option>Hands</option><option>Chest</option><option>Back</option><option>Stomach</option><option>Under the Belt</option><option>Glutes</option><option>Legs</option><option>Feet</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Size<select class="mr-field" name="size"><option value="">Choose</option><option>Quarter (1 in)</option><option>Dollar bill (6 in)</option><option>Placemat (12 × 18 in)</option><option>Towel (full back/leg)</option></select></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Your idea<textarea class="mr-field" name="idea" rows="3" style="resize: vertical; line-height: 1.5"></textarea></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Reference photos (optional)<input class="mr-field" type="file" name="refs" multiple accept="image/*" style="padding: 10px 12px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Venmo username<input class="mr-field" type="text" name="venmo"></label>
+<label style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 16px; line-height: 1.4; font-weight: 400; color: #ece6ea"><input class="mr-check" type="checkbox" name="textReminders" checked="{{texts}}" onChange="{{toggleTexts}}">Text me reminders too</label>
+<sc-if value="{{texts}}" hint-placeholder-val="{{false}}">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Mobile number<input class="mr-field" type="tel" name="phone" autocomplete="tel"></label>
+</sc-if>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 400; color: #b9a3b1">AI art is fine as inspiration. Your tattoo will be Alexi's own design.</p>
+<button type="button" onClick="{{send}}" style="min-height: 54px; border: 0; border-radius: 999px; background: {{neon}}; color: #120009; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 16px; box-shadow: 0 0 24px {{neonSoft}}">Send request</button>
+</section>
+</sc-if>
+</main>
+
+</div>
+</template>
+<template id="dc-M_Book_Deal">
+<div class="md-root" style="width: 100%; max-width: 560px; margin: 0 auto; box-sizing: border-box; background-color: #000000; color: #f7e6f1; font-family: 'Josefin Sans', system-ui, sans-serif; font-weight: 300">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; border-bottom: 1px solid #2a1a24">
+<sc-if value="{{hasBack}}" hint-placeholder-val="{{false}}">
+<button type="button" onClick="{{back}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 10px; border-radius: 999px; border: 1px solid #5a3a4e; background: transparent; color: #f7e6f1; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Days</button>
+</sc-if>
+<sc-if value="{{noBack}}" hint-placeholder-val="{{true}}">
+<a href="mobile-book.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 10px; border-radius: 999px; border: 1px solid #5a3a4e; color: #f7e6f1; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Days</a>
+</sc-if>
+<a href="mobile.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #f7e6f1; text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase">Alukx Alexi</a>
+</header>
+
+<main style="padding: 26px 16px 40px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 26px; padding: 0 12px; border-radius: 999px; background: #ffe14d; color: #120009; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase">★ Special deal day</span>
+<h1 style="margin: 0; font-size: 34px; line-height: 1.1; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: {{tubeCore}}; text-shadow: 0 0 6px {{neon}}, 0 0 18px {{neon}}, 0 0 36px {{neonSoft}}">{{heading}}</h1>
+<p style="margin: 0; font-size: 16px; font-weight: 400; color: #ece6ea">{{dateTitle}}</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{neonText}}">{{priceLine}} · {{spotsLine}}</p>
+</div>
+
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<section aria-live="polite" style="padding: 24px 20px; display: flex; flex-direction: column; gap: 12px; background: #0b0509; border: 1px solid #3a2232; border-radius: 16px">
+<h2 style="margin: 0; font-size: 26px; font-weight: 600; color: #ffffff">Your spot is on hold.</h2>
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: {{neonText}}">{{heldLine}}</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; font-weight: 400; color: #ece6ea">Send your [$AMOUNT] deposit to [@VENMO-HANDLE] within 24 hours to keep it.</p>
+</section>
+</sc-if>
+
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<section aria-labelledby="timesTitle" style="display: flex; flex-direction: column; gap: 10px">
+<h2 id="timesTitle" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: {{neonText}}">1 · Pick a time</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{slots}}" as="s" hint-placeholder-count="8">
+<button type="button" onClick="{{s.pick}}" disabled="{{s.taken}}" aria-pressed="{{s.pressed}}" aria-label="{{s.aria}}" style="{{s.style}}">{{s.time}}</button>
+</sc-for>
+</div>
+</section>
+
+<section aria-labelledby="flashTitle" style="display: flex; flex-direction: column; gap: 10px">
+<h2 id="flashTitle" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: {{neonText}}">2 · Pick a flash design</h2>
+<div class="strip" style="display: flex; gap: 10px; overflow-x: auto; margin: 0 -16px; padding: 4px 16px 8px; scroll-snap-type: x mandatory">
+<sc-for list="{{designs}}" as="d" hint-placeholder-count="6">
+<button type="button" onClick="{{d.pick}}" aria-pressed="{{d.pressed}}" aria-label="{{d.name}}" class="fl {{d.cls}}" style="{{d.style}}"></button>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; font-weight: 400; color: #d9c3d1">{{pickedLine}}</p>
+</section>
+
+<section aria-label="Hold your spot" style="padding: 20px 18px; display: flex; flex-direction: column; gap: 14px; background: #0b0509; border: 1px solid #3a2232; border-radius: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Your name<input class="md-field" type="text" name="name" autocomplete="name"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Email<input class="md-field" type="email" name="email" autocomplete="email"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #d9c3d1">Venmo username<input class="md-field" type="text" name="venmo"></label>
+<button type="button" onClick="{{hold}}" style="min-height: 54px; border: 0; border-radius: 999px; background: {{neon}}; color: #120009; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 16px; box-shadow: 0 0 24px {{neonSoft}}">Hold my spot</button>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 400; color: #b9a3b1">{{holdHint}}</p>
+</section>
+</sc-if>
+</main>
+
+</div>
+</template>
+<p style="margin:0;padding:0 16px 28px;text-align:center;font-family:'Josefin Sans',system-ui,sans-serif;font-size:14px"><a href="book.html?desktop">View the desktop site</a></p>
+<script src="assets/js/dc.js"></script>
+<script>
+DC.define("M_Book", {"neon": "#ff3fb0", "dealSpots": 8}, (function () {
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: false, count: 8, sel: null, screen: 'cal' };
+  }
+  go(next) {
+    this.setState(next, () => { try { window.scrollTo(0, 0); } catch (e) {} });
+  }
+  hexToRgb(hex) {
+    const h = (hex || '#ff3fb0').replace('#', '');
+    const n = parseInt(h.length === 3 ? h.split('').map((c) => c + c).join('') : h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  // SAMPLE availability: stands in for Alexi's real bookings until wired to real data.
+  hash(y, m, d) {
+    let h = Math.imul((y * 372 + m * 31 + d) ^ 0x9e3779b9, 2654435761) >>> 0;
+    h ^= h >>> 15;
+    h = Math.imul(h, 2246822519) >>> 0;
+    h ^= h >>> 13;
+    return h >>> 0;
+  }
+  renderVals() {
+    const neon = this.props.neon ?? '#ff3fb0';
+    const spots = this.props.dealSpots ?? 8;
+    const [r, g, b] = this.hexToRgb(neon);
+    const mix = (t) => `rgb(${Math.round(r + (255 - r) * t)},${Math.round(g + (255 - g) * t)},${Math.round(b + (255 - b) * t)})`;
+    const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const now = new Date();
+    const max = 40;
+    const count = Math.min(this.state.count, max);
+    const days = [];
+    for (let i = 1; i <= count; i++) {
+      const dt = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i);
+      const y = dt.getFullYear(), m = dt.getMonth(), d = dt.getDate(), wd = dt.getDay();
+      const h = this.hash(y, m, d);
+      const title = `${DAYS[wd]}, ${MONTHS[m]} ${d}, ${y}`;
+      const short = `${DAYS[wd].slice(0, 3)}, ${MONTHS[m].slice(0, 3)} ${d}`;
+      const f13 = wd === 5 && d === 13;
+      const isDeal = f13 || h % 100 < 12;
+      const isOpen = !isDeal && h % 100 < 55;
+      const dealName = f13 ? 'Friday the 13th' : 'Flash Day';
+      const left = 1 + (h % spots);
+      let pick = null;
+      if (isDeal) pick = () => this.go({ screen: 'deal', sel: { title, deal: dealName, left, seed: h % 97 } });
+      else if (isOpen) pick = () => this.go({ screen: 'request', sel: { title } });
+      days.push({
+        short, dealName, left, isDeal, isOpen, isBooked: !isDeal && !isOpen, pick,
+        aria: isDeal ? `${title}, ${dealName}, ${left} spots left` : `${title}, open`
+      });
+    }
+    const screen = this.state.screen;
+    const sel = this.state.sel || {};
+    return {
+      neon,
+      neonSoft: `rgba(${r},${g},${b},0.45)`,
+      neonText: mix(0.45),
+      tubeCore: mix(0.88),
+      menu: this.state.menu,
+      menuStr: this.state.menu ? 'true' : 'false',
+      toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      days,
+      canMore: count < max,
+      more: () => this.setState({ count: this.state.count + 8 }),
+      isCal: screen === 'cal',
+      isReq: screen === 'request',
+      isDeal: screen === 'deal',
+      selTitle: sel.title || '',
+      selDeal: sel.deal || 'Flash Day',
+      selLeft: sel.left ?? spots,
+      selSeed: sel.seed ?? 0,
+      spots,
+      back: () => this.go({ screen: 'cal' })
+    };
+  }
+}
+
+return Component;
+})());
+DC.define("M_Book_Request", {"neon": "#ff3fb0", "dateTitle": "Tuesday, November 24, 2026"}, (function () {
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false, texts: false };
+  }
+  hexToRgb(hex) {
+    const h = (hex || '#ff3fb0').replace('#', '');
+    const n = parseInt(h.length === 3 ? h.split('').map((c) => c + c).join('') : h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  renderVals() {
+    const neon = this.props.neon ?? '#ff3fb0';
+    const [r, g, b] = this.hexToRgb(neon);
+    const mix = (t) => `rgb(${Math.round(r + (255 - r) * t)},${Math.round(g + (255 - g) * t)},${Math.round(b + (255 - b) * t)})`;
+    const onBack = this.props.onBack;
+    const hasBack = typeof onBack === 'function';
+    return {
+      neon,
+      neonSoft: `rgba(${r},${g},${b},0.45)`,
+      neonText: mix(0.45),
+      tubeCore: mix(0.88),
+      dateTitle: this.props.dateTitle || 'Tuesday, November 24, 2026',
+      hasBack,
+      noBack: !hasBack,
+      back: hasBack ? onBack : null,
+      texts: this.state.texts,
+      toggleTexts: () => this.setState({ texts: !this.state.texts }),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      send: () => this.setState({ sent: true })
+    };
+  }
+}
+
+return Component;
+})());
+DC.define("M_Book_Deal", {"neon": "#ff3fb0", "dateTitle": "Saturday, November 28, 2026", "dealName": "Flash Day", "spots": 8, "spotsLeft": 5, "seed": 3}, (function () {
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { slot: null, design: null, sent: false, nudge: false };
+  }
+  hexToRgb(hex) {
+    const h = (hex || '#ff3fb0').replace('#', '');
+    const n = parseInt(h.length === 3 ? h.split('').map((c) => c + c).join('') : h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  renderVals() {
+    const neon = this.props.neon ?? '#ff3fb0';
+    const [r, g, b] = this.hexToRgb(neon);
+    const mix = (t) => `rgb(${Math.round(r + (255 - r) * t)},${Math.round(g + (255 - g) * t)},${Math.round(b + (255 - b) * t)})`;
+    const tubeCore = mix(0.88);
+    const onBack = this.props.onBack;
+    const hasBack = typeof onBack === 'function';
+    const dealName = this.props.dealName || 'Flash Day';
+    const isF13 = dealName === 'Friday the 13th';
+    const spots = Math.max(1, Number(this.props.spots ?? 8));
+    const left = Math.max(0, Math.min(spots, Number(this.props.spotsLeft ?? 5)));
+    const seed = Number(this.props.seed ?? 3);
+    const dateTitle = this.props.dateTitle || 'Saturday, November 28, 2026';
+    // SAMPLE schedule: hourly times from 11 AM, taken spots spread out. Replace with the real day's bookings.
+    const taken = new Set();
+    let i = seed % spots;
+    while (taken.size < spots - left) { taken.add(i); i = (i + 3) % spots; if (taken.has(i)) i = (i + 1) % spots; }
+    const timeOf = (idx) => { const hour = 11 + idx; return `${((hour + 11) % 12) + 1}:00 ${hour < 12 ? 'AM' : 'PM'}`; };
+    const slots = [];
+    for (let s = 0; s < spots; s++) {
+      const isTaken = taken.has(s);
+      const on = this.state.slot === s;
+      slots.push({
+        time: timeOf(s),
+        taken: isTaken,
+        pressed: on ? 'true' : 'false',
+        aria: `${timeOf(s)}${isTaken ? ', taken' : ''}`,
+        style: `min-height: 48px; border-radius: 10px; font-size: 15px; font-weight: 600; ${isTaken ? 'border: 1px solid #2a1a24; background: transparent; color: #6f5c68; text-decoration: line-through; cursor: not-allowed' : on ? `border: 0; background: ${neon}; color: #120009; box-shadow: 0 0 18px rgba(${r},${g},${b},0.45)` : 'border: 1px solid #5a3a4e; background: #0b0509; color: #f7e6f1'}`,
+        pick: isTaken ? null : () => this.setState({ slot: s, nudge: false })
+      });
+    }
+    const NAMES = ['Sketch anchor', 'Rope anchor', 'Bold anchor', 'Robot helmet', 'Robot helmet profile', 'Robot helmet duo', 'Robot helmet, tilted', 'Dachshund', 'Pit bull', 'Terrier', 'Sitting puppy', 'Retro controller', 'Mini controller', 'Gamer dagger', 'Dark helmet', 'Trooper helmet', 'Starburst crest', 'Anime girl', 'Sitting cat', 'Betta fish', 'Girl with cat', 'Speedster', 'Caped hero', 'Sphynx cat'];
+    const designs = NAMES.map((name, idx) => {
+      const n = idx + 1;
+      const on = this.state.design === n;
+      return {
+        name,
+        cls: `fl-${n}`,
+        pressed: on ? 'true' : 'false',
+        style: `flex: none; width: 104px; height: 104px; padding: 0; border-radius: 14px; scroll-snap-align: start; border: ${on ? `4px solid ${neon}` : '4px solid #ffffff'}; box-shadow: ${on ? `0 0 18px rgba(${r},${g},${b},0.6)` : 'none'}`,
+        pick: () => this.setState({ design: n, nudge: false })
+      };
+    });
+    const hasSlot = this.state.slot !== null;
+    const hasDesign = this.state.design !== null;
+    const timeText = hasSlot ? timeOf(this.state.slot) : '';
+    const designText = hasDesign ? NAMES[this.state.design - 1] : '';
+    return {
+      neon,
+      neonSoft: `rgba(${r},${g},${b},0.45)`,
+      neonText: mix(0.45),
+      tubeCore,
+      heading: isF13 ? 'Friday the 13th' : 'Flash Tattoo Bonanza!',
+      priceLine: isF13 ? '[$13 + tip deal]' : 'From [$PRICE]',
+      dateTitle,
+      spotsLine: `${left} of ${spots} spots left`,
+      hasBack,
+      noBack: !hasBack,
+      back: hasBack ? onBack : null,
+      slots,
+      designs,
+      pickedLine: hasDesign ? `Picked: ${designText}. Swipe for more.` : 'Swipe to see all 24 designs.',
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      heldLine: `${timeText} · ${designText}`,
+      holdHint: this.state.nudge ? 'Pick a time and a flash design first.' : 'Held automatically. Venmo deposit due within 24 hours.',
+      hold: () => this.setState(hasSlot && hasDesign ? { sent: true, nudge: false } : { nudge: true })
+    };
+  }
+}
+
+return Component;
+})());
+DC.mount("M_Book", document.getElementById('app'));
+</script>
+</body>
+</html>

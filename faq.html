@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Phones get the mobile site. Add ?desktop to stay on the full site. */
+(function(){try{if(/[?&]desktop/.test(location.search))sessionStorage.setItem('siteView','desktop');if(/[?&]mobile/.test(location.search))sessionStorage.setItem('siteView','mobile');if(sessionStorage.getItem('siteView')==='desktop')return;}catch(e){}
+if(window.matchMedia('(max-width: 760px)').matches&&location.search.indexOf('arrange')<0)location.replace('mobile-faq.html'+location.hash);})();
+</script>
 <title>Alukx Alexi Tattoo — FAQs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&amp;display=swap" rel="stylesheet">

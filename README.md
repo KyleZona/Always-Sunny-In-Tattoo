@@ -21,6 +21,15 @@ Open the site with `?arrange` on the end of the address, e.g. `https://kylezona.
 2. Add a line for it in `data/catalog.js` under `photos` (tattoo photos) or `stickers`.
 3. It shows up in the editor's **Add** panel.
 
+## Mobile version
+
+Phones (screens 760px wide or less) are sent to a lighter mobile site automatically:
+
+- `mobile.html` (home), `mobile-about.html`, `mobile-work.html`, `mobile-faq.html`, `mobile-book.html` (days list, request-a-date and flash-day screens)
+- Each desktop page has a small script at the top that redirects phones to its mobile page. Each mobile page sends wide screens back to the desktop page.
+- Add `?desktop` to any address to stay on the full site, or `?mobile` to stay on the mobile site (remembered for that browser tab). Mobile pages have a "View the desktop site" link at the bottom.
+- `?arrange` never redirects, so the wall editor still works.
+
 ## Files
 
 - `index.html`, `about.html`, `work.html`, `faq.html`, `book.html`: the pages (book.html holds the calendar, request-a-date and flash-day screens)
